@@ -1,5 +1,6 @@
 package org.acme.security.keycloak.authorization;
 
+import jakarta.annotation.security.PermitAll;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
@@ -7,6 +8,7 @@ import jakarta.ws.rs.Path;
 public class PublicResource {
 
     @GET
+    @PermitAll
     public String serve() {
         return "accessible to anyone";
     }

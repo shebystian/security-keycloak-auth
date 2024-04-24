@@ -1,5 +1,6 @@
 package org.acme.security.keycloak.authorization;
 
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
@@ -12,6 +13,7 @@ import io.quarkus.security.Authenticated;
 public class AdminResource {
 
     @GET
+    @RolesAllowed("admin_client_role")
     @Produces(MediaType.TEXT_PLAIN)
     public String admin() {
         return "granted";
