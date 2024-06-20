@@ -19,7 +19,7 @@ public class UsersResource {
 
     @Inject
     SecurityIdentity identity;
-
+h
     @GET
     @Path("/me")
     @RolesAllowed("user_client_role")
@@ -33,7 +33,7 @@ public class UsersResource {
     @RolesAllowed("user_client_role")
     @NoCache
     public String test() {
-        return "acceso a usuario no admin";
+        return "acceso a usuario basico, no admin";
     }
 
 

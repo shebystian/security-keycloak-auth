@@ -9,7 +9,7 @@ public class PublicResource {
 
     @GET
     @PermitAll
-    public String serve() {
-        return "accessible to anyone";
+    public String server() {
+        return "Endpoint publico accessible a todos.";
     }
 }

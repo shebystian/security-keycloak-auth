@@ -13,15 +13,12 @@ import org.keycloak.authorization.client.AuthzClient;
 @Path("/api/private")
 @Authenticated
 public class PrivateResource {
-    //@Inject
-    //AuthzClient authzClient;
-
 
     @GET
     @RolesAllowed("user_client_role")
     @Produces(MediaType.TEXT_PLAIN)
     public String test() {
-        return "acceso concedido a usuario registrado en keycloak";
+        return "acceso concedido al usuario/rol configurado en keycloak";
     }
 
 }

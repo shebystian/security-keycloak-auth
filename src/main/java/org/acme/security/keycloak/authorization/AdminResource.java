@@ -16,6 +16,6 @@ public class AdminResource {
     @RolesAllowed("admin_client_role")
     @Produces(MediaType.TEXT_PLAIN)
     public String admin() {
-        return "granted";
+        return "acceso concedido a usuario/rol administrador.";
     }
 }
